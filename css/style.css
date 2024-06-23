@@ -1,0 +1,615 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap');
+
+:root
+{
+    --yellow:#F6C90E;
+    --black:#192a56;
+    --light-color:#666;
+    --box-shadow:0 .5rem 1.5rem rgba(0,0,0,.1);
+}
+*
+{
+    font-family: 'Nunito', sans-serif;
+    margin: 0;
+    padding: 0;
+    text-transform: capitalize;
+    transition: all .2s linear;
+}
+html
+{
+    font-size:70%;
+    scroll-padding-top: 5.5rem;
+    scroll-behavior: smooth;
+   
+}
+
+
+ /* Dark mode styles */
+.dark-mode{
+    background-color: #222;
+    color: #fff;
+}
+.dark-mode .card {
+    border: none;
+}
+.dark-mode nav {
+    background-color: black;
+}
+.dark-mode .nav-link
+{
+    color: gray;
+}
+.dark-mode nav .nav-link:hover
+{
+    color:white;
+    text-decoration: none;
+
+}
+.dark-mode .special h1
+{
+font-size:70px;
+color: white;
+font-weight: bolder;
+}
+#modeToggleBtn:focus {
+    outline: none;
+    box-shadow: none;
+}
+nav .navbar .navbar-toggler
+{
+    background-color: black;
+}
+body
+{
+    padding: 50px 0px 0px 0px;
+    z-index: 0;
+    overflow-x: hidden;
+}
+#pagecontent
+{
+    display: none;
+}
+
+#loader {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+nav
+{
+    box-shadow: var(--box-shadow);
+    position: fixed;
+    background-color: white;
+}
+nav .navbar-brand
+{
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left:10px;
+    padding-right: 10px;
+} 
+nav .navbar-brand i
+{
+    color: #F6C90E;font-size: 25px
+} 
+nav .navbar-brand span
+{
+    color: black;
+    font-size: 25px;
+}
+
+.dark-mode nav .navbar-brand span
+{
+    color:white;
+}
+nav .nav-link
+{
+    font-size :1.5rem;
+    color:var(--light-color);
+    text-decoration: none;
+
+}
+nav .nav-link:hover
+{
+    color: black;
+    text-decoration: none;
+
+}
+ul a
+{
+ font-size :1.5rem;
+ color:var(--light-color);
+}
+header
+{
+    padding: 1rem 7%;
+    align-items: center;
+    display: flex; 
+    justify-content: space-between; 
+     z-index: 1000;
+}
+
+.row-header{
+    margin:0px auto;
+    padding:0px;
+}
+
+.row-content {
+    margin:0px auto;
+    padding: 50px 0px 50px 0px;
+    min-height:400px;
+}
+.special h1
+{
+font-size:70px;
+color: #333;
+font-weight: bolder;
+}
+.special .psquare{
+    font-size:70px;
+    color: #F0A500;
+}
+.special p
+{
+font-size:1.6rem;
+}
+.special .fbtn
+{
+border-radius:25px;
+}
+
+/* Food Card Container */
+.food-card {
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    background-color: #fff;
+    transition: transform 0.2s ease-in-out;
+}
+
+/* Add a hover effect for the card */
+.food-card:hover {
+    transform: scale(1.05);
+}
+
+/* Food Card Image */
+.food-card img {
+    width: 100%;
+    height: auto;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+/* Food Card Body */
+.food-card .card-body {
+    padding: 15px;
+    text-align: center;
+}
+
+/* Food Title */
+.food-card .card-title {
+    margin: 10px 0;
+    font-size: 1.5em;
+    color: #333;
+}
+
+/* Food Description */
+.food-card .card-text {
+    color: #777;
+    font-size: 1em;
+    margin: 10px 0;
+}
+
+/* Button */
+.food-card .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 10px;
+    background-color: #F0A500;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.2s ease-in-out;
+}
+
+/* Button Hover Effect */
+.food-card .btn:hover {
+    background-color: rgb(206, 134, 0);
+    color: white;
+}
+
+/* Container and Row Adjustments */
+.dishes .container {
+    max-width: 1200px;
+}
+
+.dishes .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.dishes .col-lg-3,
+.dishes .col-md-6,
+.dishes .col-sm-12 {
+    display: flex;
+    justify-content: center;
+}
+.container-fluid {
+    text-align: center;
+    padding: 50px 0;
+}
+
+.container-fluid h5 {
+    font-size: 20px;
+}
+
+.container-fluid h1 {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.container-fluid .btn {
+    font-size: 20px;
+    letter-spacing: 5px;
+    margin-top: 20px;
+}
+
+
+/* About Us Section */
+.aboutus {
+    overflow-x: hidden;
+    padding: 40px 0;
+}
+
+.aboutus h3 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+}
+
+.aboutus p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+/* General Styles */
+.text-center {
+    text-align: center;
+}
+
+.nav-link {
+    text-decoration: none;
+}
+
+.nav-link:hover {
+    text-decoration: underline;
+}
+
+
+.aboutus .btn {
+    background-color: #F6C90E;
+    color: #fff;
+    font-size: 1.3rem;
+    border: none;
+    width:130px;
+    height:45px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.aboutus .btn:hover {
+    background-color: #e5b806;
+    color: #fff;
+}
+
+/* Container and Row Adjustments */
+.aboutus .container {
+    max-width: 1200px;
+}
+
+.aboutus .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.aboutus .img-fluid {
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.nav-link {
+    text-decoration: none;
+}
+
+.nav-link:hover {
+    text-decoration: underline;
+}
+.mysection h3
+{
+    font-weight: bold;
+    font-size:2.5rem;
+}
+.working-box
+{
+    padding:30px;
+}
+.working i{
+    width:150px;
+    height:150px;
+    border-radius:75px;
+    padding-top:40px;
+}
+.working p{
+    font-size:1.3rem;
+    padding:10px;
+    font-weight: bold;
+}
+.aboutresto h2
+{
+    font-weight: bold;
+    font-size:30px;
+}
+.aboutresto p{
+    padding-top:10px;
+    font-size:16px;
+}
+section .card {
+    background-color: white;
+    border-radius: 20px;
+}
+
+.dark-mode .card {
+    background-color: #444;
+    border: none;
+}
+.mycard
+{
+background-color:#303841;
+border-radius: 20px;
+}
+.mycard:hover
+{
+    transform: scale(1.05);
+}
+.mysection .card-text{
+    font-size:12px;
+} 
+.mycard h5{
+    font-weight: bold;
+}
+.aboutus h3
+{
+    font-weight: bold;
+    font-size: 2.5rem;
+}
+.dark-mode .dishes h3
+{
+ color: white;
+}
+.dishes h3
+{
+font-size: 2.5rem;
+font-weight: bold;
+} 
+.index_gal{
+    padding: 50px 0;
+  }
+  .container_gal{
+    width:100%;
+    min-height:10vh;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    padding:50px 8%;
+  }
+  .gallary{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+    grid-gap: 30px;
+  }
+  .gallary img{
+    width: 100%;
+  }
+  .index_gal {
+    padding: 50px 0;
+}
+
+.container_gal {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.gallary {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.gallary a {
+    display: block;
+    width: 300px; /* Fixed width for each image */
+    max-width: 100%; /* Ensure image doesn't exceed container width */
+    margin-bottom: 20px;
+    border-radius: 10px; /* Rounded corners */
+    overflow: hidden; /* Ensure images don't overflow rounded corners */
+}
+
+.gallary img {
+    width: 100%; /* Ensure all images fill their container */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Rounded corners */
+    transition: transform 0.2s ease-in-out;
+}
+
+.gallary a:hover img {
+    transform: scale(1.1); /* Scale up image slightly on hover */
+}
+
+.btn-outline-primary {
+    margin-top: 20px;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 767px) {
+    .gallary a {
+        width: calc(100% - 40px); /* Full width with a small gap on smaller screens */
+        margin-right: 20px;
+        margin-left: 20px;
+    }
+}
+
+
+  /* For the about page*/
+
+  .team
+  {
+    padding-top:80px;
+  }
+  .team h2{
+      font-weight: bold;
+      letter-spacing: 2px;
+      padding-bottom: 10px;
+  }
+  .team p{
+      font-size: 1.3rem;
+  }
+  .profiles
+  {
+      width:90%;
+      padding:10px;
+      margin:25px auto;
+      display:flex;
+      justify-content:space-around;
+      border-radius:8px;
+      box-sizing: border-box;
+  }
+  .profiles .img-box
+  {
+      opacity: 1;
+      display: block;
+      position: relative;
+  }
+  .profiles .img-box img{
+      width:400px;
+      border-radius:10px;
+  }
+  .profiles h2{
+      color: white;
+      font-size: 22px;
+      font-weight: bold;
+      margin-top: 15px;  
+  }
+  .profiles h3{
+      color: white;
+      font-size: 15px;
+      font-weight: bold; 
+  }
+  .img-box
+  {
+      position:absolute;
+      width:220px;
+      height:390px;
+      transition: 0.6s ease-in-out;
+      box-shadow: 0px 7px 10px rgba(0,0,0,0.5);
+      width:400px; 
+      border-radius: 10px;
+  }
+  .img-box ul
+  {
+      margin: 0;
+      padding: 20px;
+      position: absolute;
+      z-index: 1;
+      bottom: 0;
+      display: block;
+      left: 50%;
+      transform: translateX(-50%);
+      opacity: 0;
+  }
+  .img-box a{
+      color:#fff;
+  
+  }
+  .img-box:hover
+  {
+      transform:translateY(20px)
+  }
+  .img-box:before
+  {
+      content: "";
+      position: absolute;
+      top: 0;
+      left:0;
+      display: block;
+      width:100%;
+      height:100%;
+      background:linear-gradient(to bottom,rgba(231, 228, 76, 0.493),rgb(255, 252, 57));
+      z-index:2;
+      transition: 0.5s all;
+      opacity:0;
+      border-radius: 10px;
+  }
+  .img-box:hover:before
+  {
+      opacity: 1;
+  }
+  .img-box img
+  {
+      height:100%;
+      width:100%;
+      object-fit: cover;
+      position: absolute;
+      top: 0;
+      left: 0;
+  }
+  .img-box .info
+  {
+      position: relative;
+      z-index: 3;
+      color: #fff;
+      opacity:0;
+      transform:translate(30px);
+      transition: 0.5s all;
+      letter-spacing: 1px;
+      margin-top:180px;
+      text-shadow: 0px 7px 10px rgba(0,0,0,0.5);
+  }
+  .img-box .info:hover
+  {
+      opacity:1;
+      transform: translate(0px);
+  }
+  .img-box:hover:after
+  {
+      opacity: 1;
+  }
+  .img-box ul:hover
+  {
+      opacity:1;
+  }
+  .map-container-5{
+      overflow:hidden;
+      padding-bottom:56.25%;
+      position:relative;
+      height:0;
+      }
+      .map-container-5 iframe{
+      left:0;
+      top:0;
+      height:100%;
+      width:100%;
+      position:absolute;
+      }
+  
