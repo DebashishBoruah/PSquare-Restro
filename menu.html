@@ -6,45 +6,62 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <link rel="stylesheet" href="./css/style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
-    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
-    <!-- <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> -->
     <link rel="stylesheet" href="./css/lightbox.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>Menu</title>
+    <title>P Square Resto</title>
     <script>
-      window.onload=function()
-    {
-      document.getElementById('loader').style.display="none";
-      document.getElementById('pagecontent').style.display="block";
-    }
-   </script>
+        window.onload = function() {
+            document.getElementById('loader').style.display = "none";
+            document.getElementById('pagecontent').style.display = "block";
+
+            // Function to toggle between light and dark mode
+            function toggleMode() {
+                var body = document.body;
+                var modeIcon = document.getElementById('modeIcon');
+                if (body.classList.contains("dark-mode")) {
+                    body.classList.remove("dark-mode");
+                    modeIcon.src = './photos/sun.png';  // Path to the light mode icon
+                    modeIcon.alt = 'Light Mode Icon';
+                } else {
+                    body.classList.add("dark-mode");
+                    modeIcon.src = './photos/moon.png';  // Path to the dark mode icon
+                    modeIcon.alt = 'Dark Mode Icon';
+                }
+            }
+
+            document.getElementById('modeToggleBtn').addEventListener('click', toggleMode);
+        }
+    </script>
 </head>
 <body>
-  <div id="loader">
-    <img src="photos/loader.gif">
-  </div>
-  <div id="pagecontent">
-    <nav class="navbar navbar-expand-sm navbar-light fixed-top">
-      <div class="container">
-          <a class="navbar-brand text-dark mr-auto logo" href="#"> <img src="photos/psquarelogo.png" alt="P_square resto logo" width="60px" height="50px" class="img-fluid"></a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Navbar">
-              <span class="navbar-toggler-icon"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-          </button>
-          <div class="collapse navbar-collapse text-center" id="Navbar">
-              <ul class="navbar-nav ms-auto">
-                  <li class="nav-item p-2"><a class="nav-link" href="index.html">Home</a></li>
-                  <li class="nav-item p-2"><a class="nav-link" href="aboutus.html">About</a></li>
-                  <li class="nav-item p-2"><a class="nav-link active text-warning" href="#">Menu</a></li>
-                  <li class="nav-item p-2"><a class="nav-link" href="menu.html">Photos</a></li>
-              </ul>
-          </div>
-          <button type="button" class="btn btn-warning text-white btn-lg py-2">Book a Table</button>
-      </div>
-    </nav> 
-      </header>
+<div id="loader">
+  <img src="photos/loader.gif" alt="Loading">
+</div>
+<div id="pagecontent" style="display: none;">
+  <nav class="navbar navbar-expand-sm fixed-top">
+    <div class="container">
+        <a class="navbar-brand text-dark mr-auto logo" href="#">
+          <i class="fas fa-utensils font-weight-bold"><span> PSquare</span></i>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Navbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse text-center" id="Navbar">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item p-2"><a class="nav-link " href="./index.html">Home</a></li>
+                <li class="nav-item p-2"><a class="nav-link" href="#about">About</a></li>
+                <li class="nav-item p-2"><a class="nav-link" href="#services">Services</a></li>
+                <li class="nav-item p-2"><a class="nav-link" href="#photos">Photos</a></li>
+                <li class="nav-item p-2"><a class="nav-link active text-warning" href="#">Menu</a></li>
+             
+            </ul>
+        </div>
+        <button id="modeToggleBtn" class="btn text-dark btn-lg py-2 ms-2">
+            <img id="modeIcon" src="./photos/sun.png" alt="" width="20px">
+        </button>
+    </div>
+  </nav>
+</header>
       <!--Menu list-->  
       <br><br><br><br>
         <div class="container my-container">
